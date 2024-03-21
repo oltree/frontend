@@ -3,3 +3,5 @@ export function someFn(arg: number): string {
 
   return `hello world ${arg}`;
 }
+
+document.body.innerHTML = someFn(5);
