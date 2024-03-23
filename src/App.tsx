@@ -1,15 +1,19 @@
-import { Route, Routes } from 'react-router-dom';
+import { Suspense } from 'react';
+import { Link, Route, Routes } from 'react-router-dom';
 
 import { AboutAsync } from './pages/about';
 import { MainAsync } from './pages/main';
 
-import { Suspense } from 'react';
-import { Link } from 'react-router-dom';
-import './index.scss';
+import './styles/index.scss';
+import { useTheme } from './theme/useTheme';
 
 const App = () => {
+  const { theme, onToggleTheme } = useTheme();
+
   return (
-    <div className='app'>
+    <div className={`app ${theme}`}>
+      <button onClick={onToggleTheme}>TOGGLE THEME</button>
+
       <Link to={'/'}>MAIN</Link>
       <Link to={'/about'}>ABOUT</Link>
 
