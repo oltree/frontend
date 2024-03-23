@@ -4,6 +4,7 @@ import { Link, Route, Routes } from 'react-router-dom';
 import { AboutAsync } from './pages/about';
 import { MainAsync } from './pages/main';
 
+import { classNames } from './helpers/classNames/classNames';
 import './styles/index.scss';
 import { useTheme } from './theme/useTheme';
 
@@ -11,7 +12,7 @@ const App = () => {
   const { theme, onToggleTheme } = useTheme();
 
   return (
-    <div className={`app ${theme}`}>
+    <div className={classNames('app', {}, [theme])}>
       <button onClick={onToggleTheme}>TOGGLE THEME</button>
 
       <Link to={'/'}>MAIN</Link>
