@@ -13,13 +13,13 @@ export const routePaths: Record<Routes, string> = {
   [Routes.ABOUT]: '/about',
 };
 
-export const routeConfig: Record<Routes, RouteProps> = {
-  [Routes.MAIN]: {
+export const routeConfig: RouteProps[] = [
+  {
     path: routePaths.main,
     element: <Main />,
   },
-  [Routes.ABOUT]: {
+  {
     path: routePaths.about,
     element: <About />,
   },
-};
+];
