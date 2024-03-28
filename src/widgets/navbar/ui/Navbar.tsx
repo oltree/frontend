@@ -4,7 +4,6 @@ import { routePaths } from 'shared/config/routes/config';
 import { classNames } from 'shared/lib/classNames';
 import { CustomLink } from 'shared/ui/custom-link';
 import { CustomLinkTheme } from 'shared/ui/custom-link/ui/CustomLink';
-import { ThemeSwitcher } from 'shared/ui/theme-switcher';
 
 import classes from './Navbar.module.scss';
 
@@ -17,7 +16,6 @@ export const Navbar: FC<NavbarProps> = memo(props => {
 
   return (
     <div className={classNames(classes.navbar, {}, [className])}>
-      <ThemeSwitcher />
       <CustomLink to={routePaths.main} theme={CustomLinkTheme.INVERTED}>
         MAIN
       </CustomLink>
