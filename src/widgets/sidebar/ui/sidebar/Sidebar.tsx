@@ -1,8 +1,9 @@
 import { FC, memo, useState } from 'react';
 
 import { classNames } from 'shared/lib/classNames';
-import { ThemeSwitcher } from 'shared/ui/theme-switcher';
+import { ThemeSwitcher } from 'widgets/theme-switcher';
 
+import { LanguageSwitcher } from 'widgets/language-switcher/ui/LanguageSwitcher';
 import classes from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -30,6 +31,7 @@ export const Sidebar: FC<SidebarProps> = memo(props => {
 
       <div className={classes.switchers}>
         <ThemeSwitcher />
+        <LanguageSwitcher />
       </div>
     </div>
   );

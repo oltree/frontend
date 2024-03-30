@@ -5,7 +5,7 @@ import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import { classNames } from 'shared/lib/classNames';
 import { CustomButton } from 'shared/ui/custom-button';
-import { ThemeButton } from 'shared/ui/custom-button/ui/CustomButton';
+import { CustomButtonTheme } from 'shared/ui/custom-button/ui/CustomButton';
 
 import classes from './ThemeSwitcher.module.scss';
 
@@ -20,7 +20,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = memo(props => {
 
   return (
     <CustomButton
-      theme={ThemeButton.CLEAR}
+      theme={CustomButtonTheme.CLEAR}
       className={classNames(classes.themeSwitcher, {}, [className])}
       onClick={onToggleTheme}
     >
