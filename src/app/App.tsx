@@ -4,6 +4,7 @@ import { classNames } from 'shared/lib/classNames';
 import { Navbar } from 'widgets/navbar';
 import { Sidebar } from 'widgets/sidebar';
 
+import { Suspense } from 'react';
 import './styles/index.scss';
 
 const App = () => {
@@ -11,12 +12,14 @@ const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Navbar />
+      <Suspense fallback=''>
+        <Navbar />
 
-      <div className='content'>
-        <Sidebar />
-        <Router />
-      </div>
+        <div className='content'>
+          <Sidebar />
+          <Router />
+        </div>
+      </Suspense>
     </div>
   );
 };

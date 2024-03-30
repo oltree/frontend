@@ -4,13 +4,13 @@ import { classNames } from 'shared/lib/classNames';
 
 import classes from './CustomButton.module.scss';
 
-export enum ThemeButton {
+export enum CustomButtonTheme {
   CLEAR = 'clear',
 }
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  theme?: ThemeButton;
+  theme?: CustomButtonTheme;
 }
 
 export const CustomButton: FC<CustomButtonProps> = memo(props => {
