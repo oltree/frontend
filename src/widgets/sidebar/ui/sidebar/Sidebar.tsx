@@ -27,7 +27,9 @@ export const Sidebar: FC<SidebarProps> = memo(props => {
         [className]
       )}
     >
-      <button onClick={handleToggle}>Toggle</button>
+      <button type='button' onClick={handleToggle}>
+        Toggle
+      </button>
 
       <div className={classes.switchers}>
         <ThemeSwitcher />

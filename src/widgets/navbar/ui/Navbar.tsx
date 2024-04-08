@@ -11,7 +11,7 @@ interface NavbarProps {
   className?: string;
 }
 
-export const Navbar: FC<NavbarProps> = memo(props => {
+export const Navbar: FC<NavbarProps> = memo((props) => {
   const { className } = props;
 
   return (
