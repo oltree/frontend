@@ -5,7 +5,6 @@ import { classNames } from 'shared/lib/classNames';
 import { CustomButton } from 'shared/ui/custom-button';
 
 import { CustomButtonTheme } from 'shared/ui/custom-button/ui/CustomButton';
-import classes from './LanguageSwitcher.module.scss';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -23,7 +22,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = memo(props => {
   return (
     <CustomButton
       theme={CustomButtonTheme.CLEAR}
-      className={classNames(classes.languageSwitcher, {}, [className])}
+      className={classNames('', {}, [className])}
       onClick={handleToggleLanguage}
     >
       {t('language')}
