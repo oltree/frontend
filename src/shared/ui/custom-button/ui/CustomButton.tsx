@@ -18,6 +18,7 @@ export const CustomButton: FC<CustomButtonProps> = memo(props => {
 
   return (
     <button
+      type='button'
       className={classNames(classes.button, {}, [className, classes[theme]])}
       {...otherProps}
     >
