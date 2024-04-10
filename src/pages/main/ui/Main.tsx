@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 interface MainProps {}
 
 const Main: FC<MainProps> = memo(() => {
-  const { t } = useTranslation('main');
+  const { t } = useTranslation();
 
   return <div>{t('main')}</div>;
 });

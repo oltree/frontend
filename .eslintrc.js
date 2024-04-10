@@ -41,7 +41,15 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'comma-dangle': 'off',
     'no-shadow': 'off',
-    'react/jsx-props-no-spreading': 'warn',
+    'react/jsx-props-no-spreading': [
+      'warn',
+      {
+        html: 'ignore' | 'enforce',
+        custom: 'ignore' | 'enforce',
+        explicitSpread: 'ignore' | 'enforce',
+        exceptions: 'ignore' | 'enforce',
+      },
+    ],
     'implicit-arrow-linebreak': 'off',
     'no-undef': 'off',
     'react/no-deprecated': 'off',
