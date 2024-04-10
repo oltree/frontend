@@ -3,7 +3,7 @@ import { FC, memo } from 'react';
 import { Theme, useTheme } from 'app/providers/theme';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { CustomButton } from 'shared/ui/custom-button';
 import { CustomButtonTheme } from 'shared/ui/custom-button/ui/CustomButton';
 

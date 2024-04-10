@@ -1,6 +1,6 @@
 import { FC, memo, useState } from 'react';
 
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 
 import { LanguageSwitcher } from 'widgets/language-switcher/ui/LanguageSwitcher';
