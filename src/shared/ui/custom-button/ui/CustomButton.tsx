@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC, memo } from 'react';
 
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 
 import classes from './CustomButton.module.scss';
 

@@ -1,7 +1,7 @@
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { CustomButton } from 'shared/ui/custom-button';
 
 import { CustomButtonTheme } from 'shared/ui/custom-button/ui/CustomButton';

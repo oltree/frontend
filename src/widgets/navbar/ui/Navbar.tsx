@@ -1,7 +1,7 @@
 import { FC, memo } from 'react';
 
 import { routePaths } from 'shared/config/routes/config';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { CustomLink } from 'shared/ui/custom-link';
 import { CustomLinkTheme } from 'shared/ui/custom-link/ui/CustomLink';
 
@@ -11,7 +11,7 @@ interface NavbarProps {
   className?: string;
 }
 
-export const Navbar: FC<NavbarProps> = memo((props) => {
+export const Navbar: FC<NavbarProps> = memo(props => {
   const { className } = props;
 
   return (

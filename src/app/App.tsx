@@ -1,6 +1,6 @@
 import { Router } from 'app/providers/router';
 import { useTheme } from 'app/providers/theme';
-import { classNames } from 'shared/lib/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Navbar } from 'widgets/navbar';
 import { Sidebar } from 'widgets/sidebar';
 
