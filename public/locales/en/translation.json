@@ -3,5 +3,7 @@
   "language": "English",
   "main": "Main",
   "about us": "About us",
-  "page not found": "Page not found"
+  "page not found": "Page not found",
+  "something went wrong": "Something went wrong",
+  "reload page": "Reload page"
 }
