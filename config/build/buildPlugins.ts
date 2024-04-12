@@ -6,6 +6,8 @@ import {
   ProgressPlugin,
   WebpackPluginInstance,
 } from 'webpack';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+
 import { BuildOptions } from './types/config';
 
 export const buildPlugins = ({
@@ -24,4 +26,5 @@ export const buildPlugins = ({
     __IS_DEV__: JSON.stringify(isDev),
   }),
   new HotModuleReplacementPlugin(),
+  new BundleAnalyzerPlugin({ openAnalyzer: false }),
 ];
