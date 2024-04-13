@@ -3,7 +3,9 @@ import { FC, memo, useState } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 
+import { Button } from 'shared/ui/button';
 import { LanguageSwitcher } from 'widgets/language-switcher/ui/LanguageSwitcher';
+
 import classes from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -26,10 +28,11 @@ export const Sidebar: FC<SidebarProps> = memo(props => {
         { [classes.collapsed]: collapsed },
         [className]
       )}
+      data-testid='sidebar'
     >
-      <button type='button' onClick={handleToggle}>
+      <Button data-testid='sidebar-toggle-button' onClick={handleToggle}>
         Toggle
-      </button>
+      </Button>
 
       <div className={classes.switchers}>
         <ThemeSwitcher />

@@ -2,18 +2,18 @@ import { ButtonHTMLAttributes, FC, memo } from 'react';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 
-import classes from './CustomButton.module.scss';
+import classes from './Button.module.scss';
 
-export enum CustomButtonTheme {
+export enum ButtonTheme {
   CLEAR = 'clear',
 }
 
-interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
-  theme?: CustomButtonTheme;
+  theme?: ButtonTheme;
 }
 
-export const CustomButton: FC<CustomButtonProps> = memo(props => {
+export const Button: FC<ButtonProps> = memo(props => {
   const { className, children, theme, ...otherProps } = props;
 
   return (

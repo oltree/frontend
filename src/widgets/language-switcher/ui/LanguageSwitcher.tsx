@@ -2,9 +2,9 @@ import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
-import { CustomButton } from 'shared/ui/custom-button';
+import { Button } from 'shared/ui/button';
 
-import { CustomButtonTheme } from 'shared/ui/custom-button/ui/CustomButton';
+import { ButtonTheme } from 'shared/ui/button/ui/Button';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -20,12 +20,12 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = memo(props => {
   };
 
   return (
-    <CustomButton
-      theme={CustomButtonTheme.CLEAR}
+    <Button
+      theme={ButtonTheme.CLEAR}
       className={classNames('', {}, [className])}
       onClick={handleToggleLanguage}
     >
       {t('language')}
-    </CustomButton>
+    </Button>
   );
 });
