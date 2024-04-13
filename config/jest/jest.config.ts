@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 import type { Config } from 'jest';
 
 const config: Config = {
@@ -187,6 +189,14 @@ const config: Config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+
+  // extra options
+  modulePaths: ['<rootDir>src'],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+  moduleNameMapper: {
+    '\\.s?css$': 'identity-obj-proxy',
+    '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+  },
 };
 
 export default config;

@@ -57,10 +57,21 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'operator-linebreak': 'off',
     'no-console': 'warn',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': [
+      'error',
+      { markupOnly: true, ignoreAttribute: true },
+    ],
     'max-len': ['warn', { ignoreComments: true }],
   },
   globals: {
     __IS_DEV__: true,
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.test.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 };

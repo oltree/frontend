@@ -19,7 +19,8 @@ class ErrorBoundary extends Component<PropsWithChildren, ErrorBoundaryState> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    // Update state so the next render will show the fallback UI.
+    // You can also log the error to an error reporting service
+    // logErrorToMyService(error, errorInfo);
     console.error(error, errorInfo);
   }
 
