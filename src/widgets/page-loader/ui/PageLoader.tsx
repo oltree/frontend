@@ -11,7 +11,10 @@ interface PageLoaderProps {
 
 export const PageLoader: FC<PageLoaderProps> = memo(({ className }) => {
   return (
-    <div className={classNames(classes.loader, {}, [className])}>
+    <div
+      data-testid='page-loader'
+      className={classNames(classes.loader, {}, [className])}
+    >
       <Loader />
     </div>
   );

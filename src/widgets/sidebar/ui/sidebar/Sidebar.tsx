@@ -23,12 +23,12 @@ export const Sidebar: FC<SidebarProps> = memo(props => {
 
   return (
     <div
+      data-testid='sidebar'
       className={classNames(
         classes.sidebar,
         { [classes.collapsed]: collapsed },
         [className]
       )}
-      data-testid='sidebar'
     >
       <Button data-testid='sidebar-toggle-button' onClick={handleToggle}>
         Toggle

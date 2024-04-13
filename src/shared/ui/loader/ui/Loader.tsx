@@ -9,7 +9,10 @@ interface LoaderProps {
 }
 
 export const Loader: FC<LoaderProps> = memo(({ className }) => (
-  <div className={classNames(classes.loader, {}, [className])}>
+  <div
+    data-testid='loader'
+    className={classNames(classes.loader, {}, [className])}
+  >
     <div />
     <div />
     <div />
