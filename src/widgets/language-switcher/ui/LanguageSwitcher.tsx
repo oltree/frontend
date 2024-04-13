@@ -21,6 +21,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = memo(props => {
 
   return (
     <Button
+      data-testid='language-switcher'
       theme={ButtonTheme.CLEAR}
       className={classNames('', {}, [className])}
       onClick={handleToggleLanguage}

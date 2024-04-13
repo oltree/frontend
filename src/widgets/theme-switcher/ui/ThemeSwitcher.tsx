@@ -18,6 +18,7 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = memo(props => {
 
   return (
     <Button
+      data-testid='theme-switcher'
       theme={ButtonTheme.CLEAR}
       className={classNames('', {}, [className])}
       onClick={onToggleTheme}
