@@ -22,7 +22,9 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
       className={classNames(classes.wrapper, {}, [className])}
     >
       <p>{t('something went wrong')}</p>
-      <button onClick={handleReloadPage}>{t('reload page')}</button>
+      <button type='button' onClick={handleReloadPage}>
+        {t('reload page')}
+      </button>
     </div>
   );
 };

@@ -7,7 +7,7 @@ import { CustomLink, CustomLinkTheme } from './CustomLink';
 describe('custom-link', () => {
   test('test render custom-link', () => {
     renderWithTranslation(
-      <CustomLink to={'https://www.google.by/?hl=ru'}>Test</CustomLink>
+      <CustomLink to='https://www.google.by/?hl=ru'>Test</CustomLink>
     );
     expect(screen.getByText('Test')).toBeInTheDocument();
   });
@@ -15,7 +15,7 @@ describe('custom-link', () => {
   test('test render custom-link with theme', () => {
     renderWithTranslation(
       <CustomLink
-        to={'https://www.google.by/?hl=ru'}
+        to='https://www.google.by/?hl=ru'
         theme={CustomLinkTheme.INVERTED}
       >
         Test
