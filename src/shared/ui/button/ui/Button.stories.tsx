@@ -2,6 +2,7 @@ import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Theme } from 'app/providers/theme';
 import { ThemeDecorator } from 'shared/config/storybook/decorators/theme';
+
 import { Button, ButtonTheme } from './Button';
 
 export default {
@@ -14,16 +15,28 @@ export default {
 
 const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
+export const Normal = Template.bind({});
+Normal.args = {
   children: 'Text',
 };
+
+export const NormalDark = Template.bind({});
+NormalDark.args = {
+  ...Normal.args,
+};
+NormalDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Clear = Template.bind({});
 Clear.args = {
   children: 'Text',
   theme: ButtonTheme.CLEAR,
 };
+
+export const ClearDark = Template.bind({});
+ClearDark.args = {
+  ...Clear.args,
+};
+ClearDark.decorators = [ThemeDecorator(Theme.DARK)];
 
 export const Outline = Template.bind({});
 Outline.args = {
@@ -33,7 +46,6 @@ Outline.args = {
 
 export const OutlineDark = Template.bind({});
 OutlineDark.args = {
-  children: 'Text',
-  theme: ButtonTheme.OUTLINE,
+  ...Outline.args,
 };
 OutlineDark.decorators = [ThemeDecorator(Theme.DARK)];

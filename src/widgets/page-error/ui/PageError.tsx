@@ -21,9 +21,9 @@ export const PageError: FC<PageErrorProps> = ({ className }) => {
       data-testid='page-error'
       className={classNames(classes.wrapper, {}, [className])}
     >
-      <p>{t('something went wrong')}</p>
+      <p>{t('Something went wrong')}</p>
       <button type='button' onClick={handleReloadPage}>
-        {t('reload page')}
+        {t('Reload page')}
       </button>
     </div>
   );

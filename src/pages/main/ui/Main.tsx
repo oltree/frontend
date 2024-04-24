@@ -6,7 +6,7 @@ interface MainProps {}
 const Main: FC<MainProps> = memo(() => {
   const { t } = useTranslation();
 
-  return <div>{t('main')}</div>;
+  return <div>{t('Main')}</div>;
 });
 
 export default Main;
