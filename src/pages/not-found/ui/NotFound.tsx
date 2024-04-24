@@ -8,6 +8,6 @@ export const NotFound: FC = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <div className={classNames(classes.wrapper)}>{t('page not found')}</div>
+    <div className={classNames(classes.wrapper)}>{t('Page not found')}</div>
   );
 });

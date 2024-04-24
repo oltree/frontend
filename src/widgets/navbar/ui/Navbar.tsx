@@ -21,10 +21,10 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
       className={classNames(classes.navbar, {}, [className])}
     >
       <CustomLink to={routePaths.main} theme={CustomLinkTheme.INVERTED}>
-        {t('main')}
+        {t('Main')}
       </CustomLink>
       <CustomLink to={routePaths.about} theme={CustomLinkTheme.INVERTED}>
-        {t('about')}
+        {t('About')}
       </CustomLink>
     </div>
   );

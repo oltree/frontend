@@ -1,12 +1,11 @@
 import { FC, memo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Button } from 'shared/ui/button';
+import { LanguageSwitcher } from 'widgets/language-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 
-import { Button } from 'shared/ui/button';
-import { LanguageSwitcher } from 'widgets/language-switcher/ui/LanguageSwitcher';
-
-import { useTranslation } from 'react-i18next';
 import classes from './Sidebar.module.scss';
 
 interface SidebarProps {
@@ -33,7 +32,7 @@ export const Sidebar: FC<SidebarProps> = memo(props => {
       )}
     >
       <Button data-testid='sidebar-toggle-button' onClick={handleToggle}>
-        {t('hide')}
+        {t('Hide')}
       </Button>
 
       <div className={classes.switchers}>
