@@ -40,10 +40,7 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'operator-linebreak': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
-    'i18next/no-literal-string': [
-      'error',
-      { markupOnly: true, ignoreAttribute: true },
-    ],
+    'i18next/no-literal-string': 'off',
     'max-len': ['warn', { ignoreComments: true, code: 120 }],
     'react/jsx-wrap-multilines': 'off',
     'react/require-default-props': 'off',
