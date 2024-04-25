@@ -58,7 +58,10 @@ module.exports = {
     {
       files: ['**/src/**/*.test.{ts,tsx}'],
       rules: {
-        'i18next/no-literal-string': 'off',
+        'i18next/no-literal-string': [
+          'warn',
+          { markupOnly: true, ignoreAttribute: true },
+        ],
       },
     },
   ],
