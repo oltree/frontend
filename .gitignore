@@ -14,5 +14,4 @@
 .idea
 .vscode
 extractedTranslations
-storybook-static
 *storybook.log
