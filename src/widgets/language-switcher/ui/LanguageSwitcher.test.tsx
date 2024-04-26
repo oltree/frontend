@@ -9,4 +9,9 @@ describe('language-switcher', () => {
     renderWithTranslation(<LanguageSwitcher />);
     expect(screen.getByTestId('language-switcher')).toBeInTheDocument();
   });
+
+  test('test language-switcher render with short', () => {
+    renderWithTranslation(<LanguageSwitcher short />);
+    expect(screen.getByTestId('language-switcher')).toBeInTheDocument();
+  });
 });

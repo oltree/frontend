@@ -19,7 +19,16 @@ const Template: ComponentStory<typeof LanguageSwitcher> = args => (
 
 export const Light = Template.bind({});
 Light.args = {};
-
 export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
+
+export const LightShort = Template.bind({});
+LightShort.args = {
+  short: true,
+};
+export const DarkShort = Template.bind({});
+DarkShort.args = {
+  short: true,
+};
+DarkShort.decorators = [ThemeDecorator(Theme.DARK)];

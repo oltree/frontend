@@ -25,7 +25,6 @@ Normal.args = {
   children: 'Text',
   theme: CustomLinkTheme.PRIMARY,
 };
-
 export const NormalDark = Template.bind({});
 NormalDark.args = {
   ...Normal.args,
@@ -37,7 +36,6 @@ Inverted.args = {
   children: 'Text',
   theme: CustomLinkTheme.INVERTED,
 };
-
 export const InvertedDark = Template.bind({});
 InvertedDark.args = {
   ...Inverted.args,
