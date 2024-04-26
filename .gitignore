@@ -16,3 +16,6 @@
 extractedTranslations
 storybook-static
 *storybook.log
+.loki/report.html
+.loki/report.json
+

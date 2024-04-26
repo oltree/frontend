@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react';
 
-import { renderWithTranslation } from 'shared/lib/tests/renderWithTranslation/renderWithTranslation';
+import { componentRenrer } from 'shared/lib/tests/componentRenrer/componentRenrer';
 import { PageError } from './PageError';
 
 describe('page-error', () => {
   test('test page-error render', () => {
-    renderWithTranslation(<PageError />);
+    componentRenrer(<PageError />);
     expect(screen.getByTestId('page-error')).toBeInTheDocument();
   });
 });

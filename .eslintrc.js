@@ -47,6 +47,7 @@ module.exports = {
     'no-restricted-globals': ['error', 'event', 'fdescribe'],
     'react/jsx-curly-brace-presence': 'off',
     'no-param-reassign': 'off',
+    'wrap-iife': 'off',
   },
   globals: {
     __IS_DEV__: true,
