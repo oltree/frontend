@@ -5,7 +5,6 @@ i18n.use(initReactI18next).init({
   lng: 'en',
   fallbackLng: 'en',
   debug: false,
-
   interpolation: {
     escapeValue: false, // not needed for react!!
   },
