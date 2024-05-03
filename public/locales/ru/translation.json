@@ -8,5 +8,7 @@
   "Reload page": "Обновить страницу",
   "Hide": "Скрыть",
   "Lang": "Ru",
-  "Login": "Войти"
+  "Login": "Войти",
+  "Enter login": "Введите логин",
+  "Enter password": "Введите пароль"
 }

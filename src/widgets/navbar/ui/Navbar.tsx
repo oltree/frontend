@@ -1,11 +1,11 @@
 import { FC, memo, useCallback, useState } from 'react';
-
-import { classNames } from 'shared/lib/classNames/classNames';
-
 import { useTranslation } from 'react-i18next';
+
+import { LoginModal } from 'features/auth-by-username';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/button';
 import { ButtonTheme } from 'shared/ui/button/ui/Button';
-import { Modal } from 'shared/ui/modal/ui/Modal';
+
 import classes from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -31,12 +31,7 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
         </Button>
       </div>
 
-      <Modal isOpen={isAuthModal} onClose={handleToggleModal}>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab, voluptate
-        in aliquid unde sapiente vero ducimus doloremque corporis, itaque neque
-        eveniet. Sit numquam eligendi dolorem debitis, provident est recusandae
-        enim!
-      </Modal>
+      <LoginModal isOpen={isAuthModal} onClose={handleToggleModal} />
     </>
   );
 });
