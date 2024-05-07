@@ -1,10 +1,11 @@
 import { FC, memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { LoginModal } from 'features/auth-by-username';
+import { getUser, logout } from 'entities/user';
+import { LoginModal } from 'features/auth';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { Button } from 'shared/ui/button';
-import { ButtonTheme } from 'shared/ui/button/ui/Button';
+import { Button, ButtonTheme } from 'shared/ui/button';
 
 import classes from './Navbar.module.scss';
 
@@ -15,10 +16,15 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = memo(({ className }) => {
   const { t } = useTranslation();
   const [isAuthModal, setIsAuthModal] = useState(false);
+  const authData = useSelector(getUser);
+  const dispatch = useDispatch();
 
   const handleToggleModal = useCallback(() => {
     setIsAuthModal(prev => !prev);
   }, []);
+  const handleClickLogout = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
 
   return (
     <>
@@ -26,9 +32,21 @@ export const Navbar: FC<NavbarProps> = memo(({ className }) => {
         data-testid='navbar'
         className={classNames(classes.navbar, {}, [className])}
       >
-        <Button theme={ButtonTheme.CLEAR_INVERTED} onClick={handleToggleModal}>
-          {t('Login')}
-        </Button>
+        {authData ? (
+          <Button
+            theme={ButtonTheme.CLEAR_INVERTED}
+            onClick={handleClickLogout}
+          >
+            {t('Logout')}
+          </Button>
+        ) : (
+          <Button
+            theme={ButtonTheme.CLEAR_INVERTED}
+            onClick={handleToggleModal}
+          >
+            {t('Login')}
+          </Button>
+        )}
       </div>
 
       <LoginModal isOpen={isAuthModal} onClose={handleToggleModal} />

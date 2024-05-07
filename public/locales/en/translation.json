@@ -10,5 +10,8 @@
   "Lang": "En",
   "Login": "Login",
   "Enter login": "Enter login",
-  "Enter password": "Enter password"
+  "Enter password": "Enter password",
+  "Authorization": "Authorization",
+  "User not found": "User not found",
+  "Logout": "Logout"
 }

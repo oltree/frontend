@@ -32,16 +32,19 @@ export const Button: FC<ButtonProps> = memo(props => {
     theme,
     square,
     size = ButtonSize.M,
+    disabled,
     ...otherProps
   } = props;
 
   return (
     <button
       type='button'
+      disabled={disabled}
       className={classNames(
         classes.button,
         {
           [classes.square]: square,
+          [classes.disabled]: disabled,
         },
         [className, classes[theme], classes[size]]
       )}
