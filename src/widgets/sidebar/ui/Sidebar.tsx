@@ -7,8 +7,8 @@ import { routePaths } from 'shared/config/routes/config';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/button';
 import { ButtonSize, ButtonTheme } from 'shared/ui/button/ui/Button';
-import { CustomLink } from 'shared/ui/custom-link';
-import { CustomLinkTheme } from 'shared/ui/custom-link/ui/CustomLink';
+import { CustomLink, CustomLinkTheme } from 'shared/ui/custom-link';
+
 import { LanguageSwitcher } from 'widgets/language-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 

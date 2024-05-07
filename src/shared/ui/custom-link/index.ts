@@ -1,1 +1,1 @@
-export { CustomLink } from './ui/CustomLink';
+export { CustomLink, CustomLinkTheme } from './ui/CustomLink';

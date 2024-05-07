@@ -10,5 +10,8 @@
   "Lang": "Ru",
   "Login": "Войти",
   "Enter login": "Введите логин",
-  "Enter password": "Введите пароль"
+  "Enter password": "Введите пароль",
+  "Authorization": "Авторизация",
+  "User not found": "Пользователь не найден",
+  "Logout": "Выйти"
 }
