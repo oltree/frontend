@@ -53,6 +53,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'consistent-return': 'off',
+    indent: 'off',
   },
   globals: {
     __IS_DEV__: true,
