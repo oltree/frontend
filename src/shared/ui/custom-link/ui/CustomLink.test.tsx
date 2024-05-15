@@ -1,19 +1,19 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
+import { ComponentRender } from 'shared/lib/tests/ComponentRender';
 
 import { CustomLink, CustomLinkTheme } from './CustomLink';
 
 describe('custom-link', () => {
   test('test render custom-link', () => {
-    componentRender(
+    ComponentRender(
       <CustomLink to='https://www.google.by/?hl=ru'>Test</CustomLink>
     );
     expect(screen.getByText('Test')).toBeInTheDocument();
   });
 
   test('test render custom-link with theme', () => {
-    componentRender(
+    ComponentRender(
       <CustomLink
         to='https://www.google.by/?hl=ru'
         theme={CustomLinkTheme.INVERTED}

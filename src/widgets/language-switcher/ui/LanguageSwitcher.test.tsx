@@ -1,17 +1,17 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
+import { ComponentRender } from 'shared/lib/tests/ComponentRender';
 
 import { LanguageSwitcher } from './LanguageSwitcher';
 
 describe('language-switcher', () => {
   test('test language-switcher render', () => {
-    componentRender(<LanguageSwitcher />);
+    ComponentRender(<LanguageSwitcher />);
     expect(screen.getByTestId('language-switcher')).toBeInTheDocument();
   });
 
   test('test language-switcher render with short', () => {
-    componentRender(<LanguageSwitcher short />);
+    ComponentRender(<LanguageSwitcher short />);
     expect(screen.getByTestId('language-switcher')).toBeInTheDocument();
   });
 });
