@@ -1,11 +1,11 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
+import { ComponentRender } from 'shared/lib/tests/ComponentRender';
 import { PageError } from './PageError';
 
 describe('page-error', () => {
   test('test page-error render', () => {
-    componentRender(<PageError />);
+    ComponentRender(<PageError />);
     expect(screen.getByTestId('page-error')).toBeInTheDocument();
   });
 });

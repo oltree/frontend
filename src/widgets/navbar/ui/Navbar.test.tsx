@@ -1,12 +1,12 @@
 import { screen } from '@testing-library/react';
 
-import { componentRender } from 'shared/lib/tests/componentRender/componentRender';
+import { ComponentRender } from 'shared/lib/tests/ComponentRender';
 
 import { Navbar } from './Navbar';
 
 describe('navbar', () => {
   test('test navbar render', () => {
-    componentRender(<Navbar />);
+    ComponentRender(<Navbar />);
     expect(screen.getByTestId('navbar')).toBeInTheDocument();
   });
 });

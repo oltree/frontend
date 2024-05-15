@@ -7,14 +7,14 @@ import { MemoryRouter } from 'react-router-dom';
 import { StateSchema, StoreProvider } from 'app/providers/store';
 import i18nForTests from 'shared/config/i18n/i18nForTests';
 
-export interface componentRenderOptions {
+export interface ComponentRenderOptions {
   route?: string;
   initialState?: DeepPartial<StateSchema>;
 }
 
-export const componentRender = (
+export const ComponentRender = (
   component: ReactNode,
-  options: componentRenderOptions = {}
+  options: ComponentRenderOptions = {}
 ) => {
   const { route = '/', initialState } = options;
 
