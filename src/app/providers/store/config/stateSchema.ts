@@ -7,6 +7,7 @@ import {
 import { CombinedState } from 'redux';
 
 import { CounterSchema } from 'entities/counter';
+import { ProfileSchema } from 'entities/profile';
 import { UserSchema } from 'entities/user';
 import { LoginSchema } from 'features/auth';
 
@@ -14,6 +15,7 @@ export interface StateSchema {
   counter: CounterSchema;
   user: UserSchema;
   login?: LoginSchema;
+  profile?: ProfileSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;

@@ -1,18 +1,15 @@
-import { FC, memo, useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { FC, memo, useMemo, useState } from 'react';
 
-import AboutIcon from 'shared/assets/icons/about-20-20.svg';
-import MainIcon from 'shared/assets/icons/main-20-20.svg';
-import { routePaths } from 'shared/config/routes/config';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button } from 'shared/ui/button';
 import { ButtonSize, ButtonTheme } from 'shared/ui/button/ui/Button';
-import { CustomLink, CustomLinkTheme } from 'shared/ui/custom-link';
-
 import { LanguageSwitcher } from 'widgets/language-switcher';
 import { ThemeSwitcher } from 'widgets/theme-switcher';
 
+import { itemsList } from '../model/items';
+
 import classes from './Sidebar.module.scss';
+import { Item } from './item';
 
 interface SidebarProps {
   className?: string;
@@ -20,11 +17,18 @@ interface SidebarProps {
 
 export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
-  const { t } = useTranslation();
 
   const handleToggle = () => {
     setCollapsed(prev => !prev);
   };
+
+  const renderItems = useMemo(
+    () =>
+      itemsList.map(item => (
+        <Item key={item.path} item={item} collapsed={collapsed} />
+      )),
+    [collapsed]
+  );
 
   return (
     <div
@@ -46,24 +50,7 @@ export const Sidebar: FC<SidebarProps> = memo(({ className }) => {
         {collapsed ? '>' : '<'}
       </Button>
 
-      <div className={classes.items}>
-        <CustomLink
-          theme={CustomLinkTheme.INVERTED}
-          to={routePaths.main}
-          className={classes.item}
-        >
-          <MainIcon className={classes.icon} />
-          <span className={classes.link}>{t('Main')}</span>
-        </CustomLink>
-        <CustomLink
-          theme={CustomLinkTheme.INVERTED}
-          to={routePaths.about}
-          className={classes.item}
-        >
-          <AboutIcon className={classes.icon} />
-          <span className={classes.link}>{t('About us')}</span>
-        </CustomLink>
-      </div>
+      <div className={classes.items}>{renderItems}</div>
 
       <div className={classes.switchers}>
         <ThemeSwitcher />

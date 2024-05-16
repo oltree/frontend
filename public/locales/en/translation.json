@@ -13,5 +13,6 @@
   "Enter password": "Enter password",
   "Authorization": "Authorization",
   "User not found": "User not found",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Profile": "Profile"
 }

@@ -1,7 +1,7 @@
 import { counterReducer } from 'entities/counter';
 
 import { CounterSchema } from '../types/counterSchema';
-import { decrement, increment } from './counterSlice';
+import { decrement, increment } from './counter';
 
 describe('counterSlice', () => {
   test('decrement', () => {

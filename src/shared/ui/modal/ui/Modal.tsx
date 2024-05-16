@@ -2,7 +2,6 @@ import {
   FC,
   MouseEvent,
   ReactNode,
-  memo,
   useCallback,
   useEffect,
   useRef,
@@ -24,7 +23,7 @@ interface ModalProps {
 
 const ANIMATION_DELAY = 300;
 
-export const Modal: FC<ModalProps> = memo(props => {
+export const Modal: FC<ModalProps> = props => {
   const { className, children, isOpen, lazy, onClose } = props;
 
   const [isClosing, setIsClosing] = useState(false);
@@ -95,4 +94,4 @@ export const Modal: FC<ModalProps> = memo(props => {
       </div>
     </Portal>
   );
-});
+};
