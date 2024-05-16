@@ -21,9 +21,18 @@
   "users": [
     {
       "id": "1",
-      "username": "storekeeper@gmail.com",
-      "password": "Qweasd123"
+      "username": "admin",
+      "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Oleg",
+    "lastname": "Melekh",
+    "age": 26,
+    "currency": "BYN",
+    "country": "Belarus",
+    "city": "Minsk",
+    "username": "admin",
+    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+  }
 }

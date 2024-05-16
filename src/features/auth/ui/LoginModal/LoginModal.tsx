@@ -5,7 +5,6 @@ import { Loader } from 'shared/ui/loader';
 import { Modal } from 'shared/ui/modal';
 
 import { LoginFormAsync } from '../LoginForm/LoginForm.async';
-import classes from './LoginModal.module.scss';
 
 interface LoginModalProps {
   isOpen: boolean;
@@ -19,12 +18,12 @@ export const LoginModal: FC<LoginModalProps> = memo(props => {
   return (
     <Modal
       lazy
-      className={classNames(classes.loginModal, {}, [className])}
+      className={classNames('', {}, [className])}
       isOpen={isOpen}
       onClose={onClose}
     >
       <Suspense fallback={<Loader />}>
-        <LoginFormAsync />
+        <LoginFormAsync onSuccess={onClose} />
       </Suspense>
     </Modal>
   );
