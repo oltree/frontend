@@ -13,6 +13,5 @@
   "Enter password": "Введите пароль",
   "Authorization": "Авторизация",
   "User not found": "Пользователь не найден",
-  "Logout": "Выйти",
-  "Profile": "Профиль"
+  "Logout": "Выйти"
 }
