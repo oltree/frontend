@@ -8,7 +8,7 @@ import {
   useState,
 } from 'react';
 
-import { classNames } from 'shared/lib/classNames/classNames';
+import { Mods, classNames } from 'shared/lib/classNames/classNames';
 import { Portal } from 'shared/ui/portal';
 
 import classes from './Modal.module.scss';
@@ -28,7 +28,7 @@ export const Modal: FC<ModalProps> = props => {
 
   const [isClosing, setIsClosing] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout>>();
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -66,12 +66,15 @@ export const Modal: FC<ModalProps> = props => {
     }
 
     return () => {
-      clearTimeout(timerRef.current);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+
       window.removeEventListener('keydown', handleKeyDown);
     };
   }, [isOpen, handleKeyDown]);
 
-  const mods: Record<string, boolean> = {
+  const mods: Mods = {
     [classes.opened]: isOpen,
     [classes.isClosing]: isClosing,
   };

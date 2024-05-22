@@ -1,0 +1,22 @@
+.wrapper {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 2px solid var(--inverted-bg-color);
+}
+
+.header {
+  display: flex;
+  gap: 20px;
+}
+
+.editBtn {
+  margin-left: auto;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
