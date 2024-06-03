@@ -1,4 +1,4 @@
-import { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 
@@ -19,7 +19,7 @@ interface ProfileHeaderProps {
   className?: string;
 }
 
-export const ProfileHeader = ({ className }: ProfileHeaderProps) => {
+export const ProfileHeader = memo(({ className }: ProfileHeaderProps) => {
   const { t } = useTranslation('profile');
   const readonly = useSelector(getProfileReadonly);
   const dispatch = useAppDispatch();
@@ -52,4 +52,4 @@ export const ProfileHeader = ({ className }: ProfileHeaderProps) => {
       )}
     </div>
   );
-};
+});

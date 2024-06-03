@@ -1,4 +1,4 @@
-import { FC, memo } from 'react';
+import { FC } from 'react';
 import { Link, LinkProps } from 'react-router-dom';
 
 import { classNames } from 'shared/lib/classNames/classNames';
@@ -15,7 +15,7 @@ interface CustomLinkProps extends LinkProps {
   theme?: CustomLinkTheme;
 }
 
-export const CustomLink: FC<CustomLinkProps> = memo(props => {
+export const CustomLink: FC<CustomLinkProps> = props => {
   const {
     to,
     className,
@@ -33,4 +33,4 @@ export const CustomLink: FC<CustomLinkProps> = memo(props => {
       {children}
     </Link>
   );
-});
+};
