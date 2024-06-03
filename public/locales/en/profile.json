@@ -6,5 +6,11 @@
   "Email": "Email",
   "Password": "Password",
   "Save": "Save",
-  "Delete": "Delete"
+  "Delete": "Delete",
+  "Cancel": "Cancel",
+  "Error": "Error",
+  "Age": "Age",
+  "Town": "Town",
+  "User name": "User name",
+  "Avatar": "Avatar"
 }
