@@ -1,4 +1,4 @@
-import { useCallback, useEffect } from 'react';
+import { memo, useCallback, useEffect } from 'react';
 
 import {
   ProfileCard,
@@ -30,7 +30,7 @@ interface ProfileProps {
   className?: string;
 }
 
-const Profile = ({ className }: ProfileProps) => {
+const Profile = memo(({ className }: ProfileProps) => {
   const dispatch = useAppDispatch();
   const formData = useSelector(getProfileForm);
   const isLoading = useSelector(getProfileIsLoading);
@@ -111,6 +111,6 @@ const Profile = ({ className }: ProfileProps) => {
       </div>
     </DynamicModuleLoader>
   );
-};
+});
 
 export default Profile;

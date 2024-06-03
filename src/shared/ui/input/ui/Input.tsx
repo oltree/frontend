@@ -89,7 +89,7 @@ export const Input: FC<InputProps> = memo(props => {
           onChange={handleChange}
           {...otherProps}
         />
-        {isFocused && (
+        {isCaretVisible && (
           <span
             className={classes.caret}
             style={{ left: `${caretPosition * 9}px` }}
