@@ -6,5 +6,7 @@
   "Email": "Email",
   "Password": "Password",
   "Save": "Save",
-  "Delete": "Delete"
+  "Delete": "Delete",
+  "Select country": "Select country",
+  "Select currency": "Select currency"
 }

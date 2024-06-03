@@ -28,11 +28,11 @@
   "profile": {
     "first": "Oleg",
     "lastname": "Melekh",
-    "age": 26,
-    "currency": "USD",
-    "country": "Belarus",
+    "age": 27,
     "city": "Minsk",
-    "username": "admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b578f7ee072e4e894.jpg"
+    "username": "oltree",
+    "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
+    "currency": "USD",
+    "country": "Belarus"
   }
 }

@@ -13,5 +13,7 @@
   "Enter password": "Введите пароль",
   "Authorization": "Авторизация",
   "User not found": "Пользователь не найден",
-  "Logout": "Выйти"
+  "Logout": "Выйти",
+  "Select country": "Выберите страну",
+  "Select currency": "Выберите валюту"
 }
