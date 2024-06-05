@@ -1,12 +1,14 @@
+import { getUser } from 'entities/user';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 import { classNames } from 'shared/lib/classNames/classNames';
 import { CustomLink, CustomLinkTheme } from 'shared/ui/custom-link';
 
-import classes from './item.module.scss';
-
 import { IItem } from '../../../model/items';
+
+import classes from './item.module.scss';
 
 interface ItemProps {
   item: IItem;
@@ -15,6 +17,11 @@ interface ItemProps {
 
 export const Item: FC<ItemProps> = memo(({ item, collapsed }) => {
   const { t } = useTranslation();
+  const isAuth = useSelector(getUser);
+
+  if (!isAuth && item.authOnly) {
+    return null;
+  }
 
   return (
     <CustomLink

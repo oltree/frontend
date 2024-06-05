@@ -9,6 +9,7 @@ export interface IItem {
   path: string;
   text: string;
   Icon: VFC<SVGProps<SVGSVGElement>>;
+  authOnly?: boolean;
 }
 
 export const itemsList: IItem[] = [
@@ -26,5 +27,6 @@ export const itemsList: IItem[] = [
     path: routePaths.profile,
     Icon: ProfileIcon,
     text: 'Profile',
+    authOnly: true,
   },
 ];

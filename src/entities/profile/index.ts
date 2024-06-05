@@ -5,10 +5,15 @@ export { getProfileError } from './model/selectors/getProfileError/getProfileErr
 export { getProfileForm } from './model/selectors/getProfileForm/getProfileForm';
 export { getProfileIsLoading } from './model/selectors/getProfileIsLoading/getProfileIsLoading';
 export { getProfileReadonly } from './model/selectors/getProfileReadonly/getProfileReadonly';
+export { getProfileValidateErrors } from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 export { fetchProfileData } from './model/services/fetchProfileData/fetchProfileData';
 export { updateProfileData } from './model/services/updateProfileData/updateProfileData';
 export { cancelEdit, setReadonly, updateProfile } from './model/slice/profile';
-export { IProfile, ProfileSchema } from './model/types/profileSchema';
+export {
+  IProfile,
+  ProfileSchema,
+  ValidateProfileError,
+} from './model/types/profileSchema';
 export { ProfileCard } from './ui/ProfileCard/ProfileCard';
 
 export { profileReducer };

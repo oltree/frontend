@@ -77,7 +77,11 @@ export const ProfileCard: FC<ProfileCardProps> = memo(props => {
   }
 
   return (
-    <div className={classNames(classes.wrapper, {}, [className])}>
+    <div
+      className={classNames(classes.wrapper, { [classes.editing]: !readonly }, [
+        className,
+      ])}
+    >
       {data?.avatar && (
         <div className={classes.avatarWrapper}>
           <Avatar src={data?.avatar} />
@@ -126,7 +130,6 @@ export const ProfileCard: FC<ProfileCardProps> = memo(props => {
         readonly={readonly}
       />
       <CountrySelect
-        className={classes.input}
         value={data?.country}
         onChange={onChangeCountry}
         readonly={readonly}
