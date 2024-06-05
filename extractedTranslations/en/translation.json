@@ -5,12 +5,16 @@
   "Authorization": "",
   "Avatar": "Avatar",
   "Cancel": "Cancel",
+  "Data not provided": "Data not provided",
   "Edit": "Edit",
   "Enter login": "Enter login",
   "Enter password": "Enter password",
   "Error": "Error",
+  "First and last name are required": "First and last name are required",
   "First name": "First name",
   "Hide": "Hide",
+  "Incorrect age": "Incorrect age",
+  "Invalid region": "Invalid region",
   "Language": "Language",
   "Last name": "Last name",
   "Login": "Login",
@@ -44,5 +48,10 @@
   "Введите ссылку на аватар": "Введите ссылку на аватар",
   "Главная": "Главная",
   "Город": "Город",
-  "О сайте": "О сайте"
+  "Данные не указаны": "",
+  "Имя и фамилия обязательны": "",
+  "Некорректный возраст": "",
+  "Некорректный регион": "",
+  "О сайте": "О сайте",
+  "Серверная ошибка при сохранении": ""
 }

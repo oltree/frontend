@@ -12,5 +12,10 @@
   "Age": "Возраст",
   "Town": "Город",
   "User name": "Имя пользователя",
-  "Avatar": "Аватар"
+  "Avatar": "Аватар",
+  "Server error": "Серверная ошибка",
+  "Invalid region": "Некорректный регион",
+  "Data not provided": "Данные не указаны",
+  "First and last name are required": "Имя и фамилия обязательны",
+  "Incorrect age": "Некорректный возраст"
 }
