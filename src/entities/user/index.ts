@@ -1,4 +1,5 @@
 export { getUser } from './model/selectors/getUser/getUser';
+export { getUserInited } from './model/selectors/getUserInited/getUserInited';
 export {
   initAuthData,
   logout,
