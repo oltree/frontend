@@ -26,8 +26,6 @@ import { useTranslation } from 'react-i18next';
 import { Text, TextTheme } from 'shared/ui/text';
 import { ProfileHeader } from './profile-header/ProfileHeader';
 
-import classes from './Profile.module.scss';
-
 const reducers: ReducersList = {
   profile: profileReducer,
 };
@@ -112,7 +110,7 @@ const Profile = memo(({ className }: ProfileProps) => {
 
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={reducers}>
-      <div className={classNames(classes.wrapper, {}, [className])}>
+      <div className={classNames('page', {}, [className])}>
         <ProfileHeader />
         {validateErrors?.length &&
           validateErrors.map(error => (
