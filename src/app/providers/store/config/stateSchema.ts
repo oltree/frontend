@@ -8,6 +8,7 @@ import { AxiosInstance } from 'axios';
 import { NavigateOptions, To } from 'react-router-dom';
 import { CombinedState } from 'redux';
 
+import { ArticleDetailsSchema } from 'entities/article';
 import { CounterSchema } from 'entities/counter';
 import { ProfileSchema } from 'entities/profile';
 import { UserSchema } from 'entities/user';
@@ -18,6 +19,7 @@ export interface StateSchema {
   user: UserSchema;
   login?: LoginSchema;
   profile?: ProfileSchema;
+  article?: ArticleDetailsSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
