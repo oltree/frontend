@@ -1,10 +1,21 @@
-.navbar {
+.Navbar {
   width: 100%;
   height: var(--navbar-height);
   background: var(--inverted-bg-color);
-  padding: 0 20px;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 20px;
+  padding: 20px;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.mainLink {
+  margin-right: 15px;
+}
+
+.appName {
+  width: var(--sidebar-width);
+  margin-left: 15px;
 }

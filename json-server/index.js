@@ -9,15 +9,7 @@ const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 server.use(jsonServer.defaults({}));
 server.use(jsonServer.bodyParser);
 
-// delay for real request
-server.use(async (req, res, next) => {
-  await new Promise(res => {
-    setTimeout(res, 1000);
-  });
-  next();
-});
-
-// login
+// Эндпоинт для логина
 server.post('/login', (req, res) => {
   try {
     const { username, password } = req.body;
@@ -36,12 +28,13 @@ server.post('/login', (req, res) => {
 
     return res.status(403).json({ message: 'User not found' });
   } catch (e) {
-    console.log(e);
+    console.error(e);
     return res.status(500).json({ message: e.message });
   }
 });
 
-// check auth
+// проверяем, авторизован ли пользователь
+// eslint-disable-next-line
 server.use((req, res, next) => {
   if (!req.headers.authorization) {
     return res.status(403).json({ message: 'AUTH ERROR' });
@@ -52,7 +45,7 @@ server.use((req, res, next) => {
 
 server.use(router);
 
-// start server
+// запуск сервера
 server.listen(8000, () => {
-  console.log('server is running on 8000 port');
+  console.error('server is running on 8000 port');
 });

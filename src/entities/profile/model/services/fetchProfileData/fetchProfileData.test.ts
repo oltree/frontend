@@ -1,36 +1,36 @@
-import { TestAsyncThunk } from 'shared/lib/tests/test-async-thunk';
-import { Country } from 'shared/types/enums/country';
-import { Currency } from 'shared/types/enums/currency';
-
+import { userActions } from 'entities/User';
+import { TestAsyncThunk } from 'shared/lib/tests/TestAsyncThunk/TestAsyncThunk';
+import { Country } from 'entities/Country';
+import { Currency } from 'entities/Currency';
 import { fetchProfileData } from './fetchProfileData';
 
 const data = {
-  username: 'client',
-  age: 26,
-  country: Country.Belarus,
-  lastname: 'melekh',
-  first: 'oleg',
-  city: 'Minsk',
-  currency: Currency.USD,
+    username: 'admin',
+    age: 22,
+    country: Country.Ukraine,
+    lastname: 'ulbi tv',
+    first: 'asd',
+    city: 'asf',
+    currency: Currency.USD,
 };
 
-describe('fetchProfileData', () => {
-  test('success', async () => {
-    const thunk = new TestAsyncThunk(fetchProfileData);
-    thunk.api.get.mockReturnValue(Promise.resolve({ data }));
+describe('fetchProfileData.test', () => {
+    test('success', async () => {
+        const thunk = new TestAsyncThunk(fetchProfileData);
+        thunk.api.get.mockReturnValue(Promise.resolve({ data }));
 
-    const result = await thunk.callThunk();
+        const result = await thunk.callThunk('1');
 
-    expect(thunk.api.get).toHaveBeenCalled();
-    expect(result.meta.requestStatus).toBe('fulfilled');
-    expect(result.payload).toEqual(data);
-  });
+        expect(thunk.api.get).toHaveBeenCalled();
+        expect(result.meta.requestStatus).toBe('fulfilled');
+        expect(result.payload).toEqual(data);
+    });
 
-  test('error login', async () => {
-    const thunk = new TestAsyncThunk(fetchProfileData);
-    thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
-    const result = await thunk.callThunk();
+    test('error login', async () => {
+        const thunk = new TestAsyncThunk(fetchProfileData);
+        thunk.api.get.mockReturnValue(Promise.resolve({ status: 403 }));
+        const result = await thunk.callThunk('1');
 
-    expect(result.meta.requestStatus).toBe('rejected');
-  });
+        expect(result.meta.requestStatus).toBe('rejected');
+    });
 });

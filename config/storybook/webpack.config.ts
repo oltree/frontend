@@ -1,10 +1,10 @@
 import path from 'path';
-import { Configuration, DefinePlugin, RuleSetRule } from 'webpack';
-
+import webpack, { DefinePlugin, RuleSetRule } from 'webpack';
 import { buildCssLoader } from '../build/loaders/buildCssLoader';
 import { BuildPaths } from '../build/types/config';
 
-export default ({ config }: { config: Configuration }) => {
+export default ({ config }: { config: webpack.Configuration }) => {
+  // @ts-ignore
   const paths: BuildPaths = {
     build: '',
     html: '',
@@ -13,20 +13,23 @@ export default ({ config }: { config: Configuration }) => {
   };
   config!.resolve!.modules!.push(paths.src);
   config!.resolve!.extensions!.push('.ts', '.tsx');
-  config!.module!.rules!.push(buildCssLoader(true));
 
+  // eslint-disable-next-line no-param-reassign
   // @ts-ignore
-  config!.module!.rules = config!.module!.rules!.map((rule: RuleSetRule) => {
+  config!.module!.rules = config.module!.rules!.map((rule: RuleSetRule) => {
     if (/svg/.test(rule.test as string)) {
       return { ...rule, exclude: /\.svg$/i };
     }
 
     return rule;
   });
+
   config!.module!.rules.push({
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   });
+  config!.module!.rules.push(buildCssLoader(true));
+
   config!.plugins!.push(
     new DefinePlugin({
       __IS_DEV__: JSON.stringify(true),

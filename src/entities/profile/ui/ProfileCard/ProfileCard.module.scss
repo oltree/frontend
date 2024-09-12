@@ -1,23 +1,18 @@
-.wrapper {
+.ProfileCard {
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   border: 2px solid var(--inverted-bg-color);
 }
 
-.profile {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.input {
+  margin-top: 10px;
 }
 
 .loading,
 .error {
-  height: 170px;
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 300px;
 }
 
 .avatarWrapper {
