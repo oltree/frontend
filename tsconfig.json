@@ -22,9 +22,9 @@
     // common js как с обычными пакета с помощью import (require() module.export) = common js
     // import Moment from 'moment';
     // без флага esModuleInterop результат undefined
-    // console.error(Moment);
+    // console.log(Moment);
     // c флагом результат [object Object]
-    // console.error(Moment);
+    // console.log(Moment);
     "esModuleInterop": true,
     // Если какая-либо библиотека не имеет default import,
     // лоадеры вроде ts-loader или babel-loader автоматически создают их
@@ -39,5 +39,9 @@
       "module": "CommonJS"
     }
   },
-  "include": ["./config/jest/setupTests.ts", "./src/**/*.ts", "./src/**/*.tsx"]
+  "include": [
+    "./config/jest/setupTests.ts",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+  ]
 }

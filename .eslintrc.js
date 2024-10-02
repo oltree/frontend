@@ -13,7 +13,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'ulbi-tv-plugin',
+  ],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -55,6 +61,7 @@ module.exports = {
     'consistent-return': 'off',
     indent: 'off',
     'react/no-array-index-key': 'off',
+    'ulbi-tv-plugin/path-checker': 'error',
   },
   globals: {
     __IS_DEV__: true,
