@@ -62,6 +62,7 @@ module.exports = {
     indent: 'off',
     'react/no-array-index-key': 'off',
     'ulbi-tv-plugin/path-checker': 'error',
+    'function-paren-newline': 'off',
   },
   globals: {
     __IS_DEV__: true,
