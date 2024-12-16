@@ -47,7 +47,7 @@ module.exports = {
     'operator-linebreak': 'off',
     'no-console': ['warn', { allow: ['warn', 'error'] }],
     'i18next/no-literal-string': 'off',
-    'max-len': ['warn', { ignoreComments: true, code: 120 }],
+    'max-len': ['warn', { ignoreComments: true, code: 160 }],
     'react/jsx-wrap-multilines': 'off',
     'react/require-default-props': 'off',
     'no-restricted-globals': ['error', 'event', 'fdescribe'],
@@ -63,6 +63,7 @@ module.exports = {
     'react/no-array-index-key': 'off',
     'ulbi-tv-plugin/path-checker': 'error',
     'function-paren-newline': 'off',
+    'import/order': 'off',
   },
   globals: {
     __IS_DEV__: true,
