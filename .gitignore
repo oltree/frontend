@@ -19,3 +19,5 @@ storybook-static
 .loki/report.html
 .loki/report.json
 
+# Units test
+/reports
